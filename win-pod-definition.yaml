@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: win-pod
+  labels:
+      app: winapp
+      type: front-end
+spec:
+  containers:
+    - name: win-containers
+      image: mcr.microsoft.com/dotnet/nightly/runtime:7.0 
+  nodeName: akswin000000 

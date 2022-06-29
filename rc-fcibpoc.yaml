@@ -1,0 +1,19 @@
+apiVersion: v1 #this is the version of the api that we are goint to use 
+kind: ReplicationController
+metadata:
+  name: fcibpoc-rc
+  labels:
+      env: dev
+spec:
+  replicas: 9
+  selector:
+    app: fcibpoc
+  template:
+    metadata:
+      name: fcibpoc
+      labels:
+          env: dev
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
